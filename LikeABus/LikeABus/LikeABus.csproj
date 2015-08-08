@@ -126,7 +126,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Home\index.html" />
     <Content Include="Home\js\APITest.js" />
     <Content Include="Home\js\jquery.min.js" />
     <Content Include="Home\js\uI.js" />
@@ -161,6 +160,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Location.cshtml" />
+    <Content Include="Views\Home\Selection.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

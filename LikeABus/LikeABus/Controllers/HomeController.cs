@@ -29,7 +29,8 @@ namespace LikeABus.Controllers
         public ActionResult Selection()
         {
             ViewBag.Message = "Selection here";
-            return new FilePathResult("index.html", "text/html");
+            //return new FilePathResult("index.html", "text/html");
+            return View();
         }
     }
 }
