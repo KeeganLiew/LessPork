@@ -25,17 +25,11 @@ namespace LikeABus.Controllers
             ViewBag.Message = "Comments here";
             return View();
         }
-<<<<<<< HEAD
 
-        public ActionResult Location()
-        {
-            return View();
-=======
         public ActionResult Selection()
         {
             ViewBag.Message = "Selection here";
             return new FilePathResult("index.html", "text/html");
->>>>>>> KeeganHtmlBranch
         }
     }
 }
