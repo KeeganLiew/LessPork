@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "FeedBack";
+}
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="~/Scripts/LikeABus/feedback.js"></script>
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<form>
+    <label>
+        <input id ="up" class="rating" type="radio" name="rating" checked/>
+        <img class="col-xs-4" src="../../Content/happy.png" />
+    </label>
+    <label>
+        <input id="down" class="rating" type="radio" name="rating" />
+        <img class="col-xs-4" src="../../Content/sad.png"/>
+    </label>
+
+    <div class="row">
+        Comments<br />
+        <textarea id="textArea" class="col-xs-8"></textarea>
+    </div>
+    <input id="submit" class="col-xs-2" type="submit" onclick="myFunction()"/>
+</form>
+    
