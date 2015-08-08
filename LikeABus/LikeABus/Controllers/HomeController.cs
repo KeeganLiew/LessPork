@@ -23,7 +23,7 @@ namespace LikeABus.Controllers
         public ActionResult Comments()
         {
             ViewBag.Message = "Comments here";
-
+            return new FilePathResult("index.html", "text/html");
             return View();
         }
     }
