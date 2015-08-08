@@ -5,7 +5,7 @@ function person(rating, comment, latitude, longitude) {
     this.comment = comment;
     this.latitude = latitude;
     this.longitude = longitude;
-    //this.time = date();
+    this.time = Date();
 }
 
 function submitForm() {
