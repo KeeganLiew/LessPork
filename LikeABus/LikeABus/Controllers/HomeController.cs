@@ -20,9 +20,9 @@ namespace LikeABus.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Comments()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Comments here";
 
             return View();
         }

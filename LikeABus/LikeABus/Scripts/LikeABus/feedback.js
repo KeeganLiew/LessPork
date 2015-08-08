@@ -8,6 +8,7 @@ function person(rating, comment, latitude, longitude) {
     //this.time = date();
 }
 
+
 function submitForm() {
     console.log("opened script file");
 }
