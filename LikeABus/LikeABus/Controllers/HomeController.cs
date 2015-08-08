@@ -15,7 +15,7 @@ namespace LikeABus.Controllers
 
         public ActionResult FeedBack()
         {
-            ViewBag.Message = "Your application description page.";
+            //ViewBag.Message = "Your application description page.";
 
             return View();
         }
@@ -24,6 +24,11 @@ namespace LikeABus.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult Location()
+        {
             return View();
         }
     }
