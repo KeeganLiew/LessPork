@@ -42,6 +42,13 @@ function showPosition(position) {
 	getNearestBusInformation(position.coords.latitude,position.coords.longitude,240);
 }
 
+function compare(a, b) {
+    if (a.route_short_name < b.route_short_name)
+        return -1;
+    if (a.route_short_name > b.route_short_name)
+        return 1;
+    return 0;
+}
 
 function getNearestBusInformation(flat,flng,fdistance){
 	var aipKey = "5f496b63-80d7-4eb3-9855-48a01af4c4c4";
@@ -84,6 +91,7 @@ function getNearestBusInformation(flat,flng,fdistance){
         				returnArray.push(returnObj);
 						}
         			}
+        			returnArray.sort(compare);
 					display(returnArray)
 					debugger;
         			return returnArray;
@@ -99,10 +107,11 @@ function getNearestBusInformation(flat,flng,fdistance){
     });
 }
 function display(returnArray){
-	var displayString = "";
+	//var displayString = "";
 	for(var j=0; j<returnArray.length; j++){
-		displayString = displayString + returnArray[j].route_short_name +" " + returnArray[j].route_long_name + "<br>"
+	    //displayString = displayString + returnArray[j].route_short_name +" " + returnArray[j].route_long_name + "<br>"
+	    showBus(""+returnArray[j].route_short_name, ""+returnArray[j].route_long_name);
 	}
-	var x = document.getElementById("display");
-	x.innerHTML = displayString;
+	//var x = document.getElementById("display");
+	//x.innerHTML = displayString;
 }
