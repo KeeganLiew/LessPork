@@ -29,6 +29,11 @@ function myFunction() {
     submit.comment = document.getElementById('textArea').value
     console.log(submit.comment);
     console.log(submit.time);
+    sessionStorage.setItem("rating", submit.rating);
+    sessionStorage.setItem("comment", submit.comment);
+    sessionStorage.setItem("date", submit.time);
+
+    window.location.replace = '/Home/Comments';
 
 }
 

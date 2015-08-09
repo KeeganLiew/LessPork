@@ -8,4 +8,16 @@
 </head>
 <body>
   <div id="comment-box"></div>
+  <p id="comment">Testing</p>
+    <p id="busID"></p>
+    <p id="route"></p>
+    <p id="rating"></p>
+    <p id="date"></p>
+  <script>
+      document.getElementById('comment').innerHTML = sessionStorage.getItem('comment');
+      document.getElementById('busID').innerHTML = sessionStorage.getItem('busID');
+      document.getElementById('route').innerHTML = sessionStorage.getItem('route');
+      document.getElementById('rating').innerHTML = sessionStorage.getItem('rating');
+      document.getElementById('date').innerHTML = sessionStorage.getItem('date');
+  </script>
 </body>
