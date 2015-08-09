@@ -1,10 +1,13 @@
 ﻿
-    function showBus(number, route) {
+﻿function showBus(number, route) {
+    route = route.replace('amp;', '');
+    console.log(route);
     var display = $("#display");
     var content = "<div class = 'bus'>" +
         "<p>" + number + "</p>" +
         "<p>" + route + "</p>" +
-        "<button>submit</button>" +
+        //"<button id=\""+number+"\" onclick=\"button("+number+","+ route +")\">submit</button>" +
+        "<button id=\"" + number + "\" onclick=\"button('" + number + "','" + route + "')\">submit</button>" + 
         "</div>";
     display.append(content);
 };
@@ -12,6 +15,7 @@
 
 function showComments(number,route,ups,downs,comments) {
     var container = $("#comment-box");
+
     var content = "<div class='row'>" +
                         "<img class='col-xs-2 thumbnail' src='../../Content/Bus-icon.png'> " +
                         "<div class='col-xs-4'>" +

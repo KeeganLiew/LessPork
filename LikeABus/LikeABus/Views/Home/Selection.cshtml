@@ -1,6 +1,5 @@
-﻿
-@{
-    Layout = null;
+﻿@{
+    ViewBag.Title = "Selection";
 }
 
 <!DOCTYPE html>
@@ -11,152 +10,21 @@
     <meta name="description" content="zoe2015" />
     <meta name="keywords" content="zoe2015" />
     <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    
+
     <script src="js/jquery.min.js"></script>
 </head>
-<body>
-    <html>
-    <head>
-        <script src="js/APITest.js"></script>
-        <script src="../../Scripts/LikeABus/comments.js"></script>
-        <!--base href="http://www.cyclistinsuranceaustralia.com.au/"-->
-        <!--[if lte IE 9]>
-        <link rel="stylesheet" href="css/ie/v9.css" />
-        <![endif]-->
-        <!--[if lte IE 8]>
-        <link rel="stylesheet" href="css/ie/v8.css" />
-        <![endif]-->
-        <!-- Material Design Lite -->
-        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
-        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo-pink.min.css">
-        <!-- Material Design icon font -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    </head>
-    <body>
-        <html>
-        <!-- Always shows a header, even in smaller screens. -->
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <header class="mdl-layout__header">
-                <div class="mdl-layout__header-row">
-                    <!-- Title -->
-                    <span class="mdl-layout-title">Like a bus</span>
-                    <!-- Add spacer, to align navigation to the right -->
-                    <div class="mdl-layout-spacer"></div>
-                    <!-- Navigation. We hide it in small screens. -->
-                    <!--nav class="mdl-navigation mdl-layout--large-screen-only">
-                       <a class="mdl-navigation__link" href="">Link1</a>
-                       <a class="mdl-navigation__link" href="">Link2</a>
-                       <a class="mdl-navigation__link" href="">Link3</a>
-                       <a class="mdl-navigation__link" href="">Link4</a>
-                       </nav-->
-                    <!-- Right aligned menu below button -->
-                    <button id="demo-menu-lower-right"
-                            class="mdl-button mdl-js-button mdl-button--icon">
-                        <i class="material-icons">more_vert</i>
-                    </button>
-                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                        for="demo-menu-lower-right">
-                        <li class="mdl-menu__item">Some Action</li>
-                        <li class="mdl-menu__item">Another Action</li>
-                        <li disabled class="mdl-menu__item">Disabled Action</li>
-                        <li class="mdl-menu__item">Yet Another Action</li>
-                    </ul>
-                </div>
-            </header>
-            <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">Like a bus</span>
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="">Link1</a>
-                    <a class="mdl-navigation__link" href="">Link2</a>
-                    <a class="mdl-navigation__link" href="">Link3</a>
-                    <a class="mdl-navigation__link" href="">Link4</a>
-                </nav>
-            </div>
-            <main class="mdl-layout__content">
-                <div class="page-content">
-                    <!-- Simple MDL Progress Bar -->
-                    <div id="p1" class="mdl-progress mdl-js-progress progress-demo"></div>
-                    <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate progress-demo"></div>
-                    <!-- Your content goes here -->
-                    <!--button id="testButton" onclick="myFunction()">Click me</button>
-                    <button id="testButton1" onclick="myFunction1()">Click me1</button>
-                    <button id="testButton2" onclick="getLocation()">Click me2</button-->
-                    <label id="demo"><i>Debug: GeoLocation<br /></i></label>
-                    <label id="display">Spam</label>
 
-                    <!-- Accent-colored raised button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                        Button
-                    </button>
-                    <!-- Colored FAB button -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-                        <i class="material-icons">add</i>
-                    </button>
-                </div>
-            </main>
-            <!--footer class="mdl-mega-footer">
-              <div class="mdl-mega-footer__middle-section">
 
-                <div class="mdl-mega-footer__drop-down-section">
-                  <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-                  <h1 class="mdl-mega-footer__heading">Features</h1>
-                  <ul class="mdl-mega-footer__link-list">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Partners</a></li>
-                    <li><a href="#">Updates</a></li>
-                  </ul>
-                </div>
 
-                <div class="mdl-mega-footer__drop-down-section">
-                  <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-                  <h1 class="mdl-mega-footer__heading">Details</h1>
-                  <ul class="mdl-mega-footer__link-list">
-                    <li><a href="#">Specs</a></li>
-                    <li><a href="#">Tools</a></li>
-                    <li><a href="#">Resources</a></li>
-                  </ul>
-                </div>
+<h2>Location</h2>
+<script type="text/javascript" src="js/APITest.js"></script>
+<script type="text/javascript" src="../../Scripts/LikeABus/comments.js"></script>
+<p id="demo">Empty, press the Find My Bus</p>
+<div id="display"></div>
 
-                <div class="mdl-mega-footer__drop-down-section">
-                  <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-                  <h1 class="mdl-mega-footer__heading">Technology</h1>
-                  <ul class="mdl-mega-footer__link-list">
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Patterns</a></li>
-                    <li><a href="#">Usage</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Contracts</a></li>
-                  </ul>
-                </div>
 
-                <div class="mdl-mega-footer__drop-down-section">
-                  <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-                  <h1 class="mdl-mega-footer__heading">FAQ</h1>
-                  <ul class="mdl-mega-footer__link-list">
-                    <li><a href="#">Questions</a></li>
-                    <li><a href="#">Answers</a></li>
-                    <li><a href="#">Contact us</a></li>
-                  </ul>
-                </div>
 
-              </div>
-
-              <div class="mdl-mega-footer__bottom-section">
-                <div class="mdl-logo">Title</div>
-                <ul class="mdl-mega-footer__link-list">
-                  <li><a href="#">Help</a></li>
-                  <li><a href="#">Privacy & Terms</a></li>
-                </ul>
-              </div>
-
-            </footer-->
-        </div>
-</body>
 </html>
-<!-- Material Design Lite -->
-<script src="js/uI.js"></script>
-</body>
-</html>
+
 
 
