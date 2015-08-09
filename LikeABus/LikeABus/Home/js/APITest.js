@@ -25,7 +25,7 @@ function myFunction1(){
 }
 //return type: json array
 //example: 	[{route_id="8734NS5928",  agency_id="AT",  route_long_name="Midtown To Constellation  Express",  "route_desc":null,"route_type":3,"route_url":null,"route_color":"0096FF","route_text_color":"000000","st_distance_sphere":169.777530417}, {route_id="8734NS5928",  agency_id="AT",  route_long_name="Midtown To Constellation  Express",  "route_desc":null,"route_type":3,"route_url":null,"route_color":"0096FF","route_text_color":"000000","st_distance_sphere":169.777530417}]
-getLocation();
+//getLocation();
 function getLocation() {
 	var x = document.getElementById("demo");
 	if (navigator.geolocation) {
@@ -93,7 +93,7 @@ function getNearestBusInformation(flat,flng,fdistance){
         			}
         			returnArray.sort(compare);
 					display(returnArray)
-					debugger;
+					//debugger;
         			return returnArray;
         		}
         	}else{
@@ -107,11 +107,14 @@ function getNearestBusInformation(flat,flng,fdistance){
     });
 }
 function display(returnArray){
-	//var displayString = "";
+    var displayString = "";
+    var x = document.getElementById("demo");
 	for(var j=0; j<returnArray.length; j++){
-	    //displayString = displayString + returnArray[j].route_short_name +" " + returnArray[j].route_long_name + "<br>"
+	    displayString = displayString + returnArray[j].route_short_name + " " + returnArray[j].route_long_name + "<br>"
+	    //x.innerHTML = displayString;
 	    showBus(""+returnArray[j].route_short_name, ""+returnArray[j].route_long_name);
+	    //showBus(returnArray[j]);
 	}
-	//var x = document.getElementById("display");
+	
 	//x.innerHTML = displayString;
 }

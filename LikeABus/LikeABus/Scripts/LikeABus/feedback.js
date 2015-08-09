@@ -6,6 +6,8 @@ function person(rating, comment, latitude, longitude) {
     this.latitude = latitude;
     this.longitude = longitude;
     this.time = Date();
+    this.busID = sessionStorage.getItem("busID")
+    this.route = sessionStorage.getItem("route")
 }
 
 
