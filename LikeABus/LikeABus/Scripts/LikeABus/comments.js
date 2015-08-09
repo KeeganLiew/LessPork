@@ -12,7 +12,30 @@
     display.append(content);
 };
 
+function button(number, route) {
+    //alert("" + number + "," + route); // or alert($(this).attr('id'));
+    /*
+    var bus = new Object();//{ busID: number, route: route };
+    bus.busID = number;
+    bus.route = route;
+    */
+    /*
+    sessionStorage.setItem(1, bus);
+    //var persistedval = sessionStorage.getItem("1") //returns "Some Value"
+    console.log(sessionStorage.getItem(1).route);
+    //window.location = 
+    alert("" + number + "," + route); // or alert($(this).attr('id'));
+    */
 
+    sessionStorage.setItem("busID", number);
+    sessionStorage.setItem("route", route);
+    var persistedval1 = sessionStorage.getItem("busID"); //returns "Some Value"
+    var persistedval2 = sessionStorage.getItem("route")
+
+    //alert("persistedval: " + persistedval1 + " " + persistedval2);
+    window.location = '/Home/FeedBack';
+}
+/*** you can fix later nary
 function showComments(number,route,ups,downs,comments) {
     var container = $("#comment-box");
 
@@ -45,3 +68,4 @@ function addComments(com) {
     $("#busInfo").append("<button> Back</button>" +
         "</div>");
 }
+***/
