@@ -32,7 +32,7 @@ namespace LikeABus.Controllers
             //return new FilePathResult("index.html", "text/html");
             return View();
         }
-
+        /***Zoe's code, commented for testing
         [HttpPost]
         [AllowAnonymous]
         public JsonResult WriteXML(Models.Comments model)
@@ -66,5 +66,6 @@ namespace LikeABus.Controllers
             }
 
         }
+         * ***/
     }
 }
