@@ -1,31 +1,3 @@
-/*
-	zoe
-*/
-  
-function myFunction(){
-	var aipKey = "5f496b63-80d7-4eb3-9855-48a01af4c4c4";
-	var routeId = "0035WA6848";
-
-	$.ajax({
-            //url: "https://api.at.govt.nz/v1/gtfs/trips/routeid/0035WA6848?api_key=2ed0839d-89c3-41f3-910c-d6786c27491b",
-            url: "https://api.at.govt.nz/v1/gtfs/trips/routeid/0035WA6848",
-            type: "GET",
-            contentType: "json",
-			data:{"api_key":aipKey},
-            success: function (data) {
-				debugger;              
-            },
-            error: function (xhr) {
-                alert("fail:get");
-            }
-        });
-}
-function myFunction1(){
-	getNearestBusInformation(-36.846607,174.755505,250);
-}
-//return type: json array
-//example: 	[{route_id="8734NS5928",  agency_id="AT",  route_long_name="Midtown To Constellation  Express",  "route_desc":null,"route_type":3,"route_url":null,"route_color":"0096FF","route_text_color":"000000","st_distance_sphere":169.777530417}, {route_id="8734NS5928",  agency_id="AT",  route_long_name="Midtown To Constellation  Express",  "route_desc":null,"route_type":3,"route_url":null,"route_color":"0096FF","route_text_color":"000000","st_distance_sphere":169.777530417}]
-//getLocation();
 function getLocation() {
 	var x = document.getElementById("demo");
 	if (navigator.geolocation) {
@@ -37,8 +9,8 @@ function getLocation() {
 
 function showPosition(position) {
 	var x = document.getElementById("demo");
-	x.innerHTML = "<i>Debug: Latitude: " + position.coords.latitude + 
-    ", <i>Longitude: " + position.coords.longitude + "<br>";
+	x.innerHTML = "You are currently at <i>Latitude of " + position.coords.latitude +
+    " and <i>Longitude of " + position.coords.longitude + "<br>";
 	getNearestBusInformation(position.coords.latitude,position.coords.longitude,240);
 }
 
