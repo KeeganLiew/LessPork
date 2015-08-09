@@ -38,7 +38,36 @@ function myFunction() {
     sessionStorage.setItem("date", submit.time);
 
     window.location.replace = '/Home/Comments';
+    DataResults("aaa", "ddd", submit.rating, submit.comment, submit.time)
 
+}
+
+
+
+function DataResults(sbusID, sbusRoute, srating, scomment, dtdate) {
+    var myObject = new Object();
+    myObject.comment = scomment;
+    myObject.time = dtdate;
+    myObject.rating = srating;
+    myObject.busID = sbusID;
+    myObject.busRoute = sbusRoute;
+
+    var myString = JSON.stringify(myObject);
+    $.ajax({
+        url: "/Home/WriteXML",
+        dataType: "json",
+        type: "POST",
+        data: myString,
+        async: false,
+        contentType: "application/json; charset=utf-8",
+        success: function (data) {
+            return data.success;
+
+        },
+        error: function (xhr) {
+            return null;
+        }
+    });
 }
 
 
