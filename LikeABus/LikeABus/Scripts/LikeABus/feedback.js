@@ -22,11 +22,11 @@ function myFunction() {
     //console.log("Hello myFunction()s");        
     var submit = new person("","","","");
     if (document.getElementById('up').checked) {
-        submit.rating = "up";
+        submit.rating = "positive";
         //console.log("UP");
     }
     if (document.getElementById('down').checked) {
-        submit.rating = "down"
+        submit.rating = "negative"
         //console.log("DOWN");
     }
     console.log(submit.rating);
