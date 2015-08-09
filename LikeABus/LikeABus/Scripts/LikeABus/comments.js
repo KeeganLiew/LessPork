@@ -1,4 +1,5 @@
-﻿function showBus(number, route) {
+﻿
+    function showBus(number, route) {
     var display = $("#display");
     var content = "<div class = 'bus'>" +
         "<p>" + number + "</p>" +
@@ -7,6 +8,7 @@
         "</div>";
     display.append(content);
 };
+
 
 function showComments(number,route,ups,downs,comments) {
     var container = $("#comment-box");
@@ -29,10 +31,13 @@ function showComments(number,route,ups,downs,comments) {
                     "</div>" +
                     "<div class='row' id = 'busInfo'>";
     container.append(content);
-    for (var i = 0; i < comments.length; i++) {
-        $("#busInfo").append("<div class='comment'> -" + commments[i] + "</div>");
+    addComments(comments);
+};
+
+function addComments(com) {
+    for (var i = 0; i < com.length; i++) {
+        $("#busInfo").append("<div class='comment'> -" + com[i] + "</div>");
     }
     $("#busInfo").append("<button> Back</button>" +
-        "<button> Back</button>" +
-        "</div>");                 
-};
+        "</div>");
+}
