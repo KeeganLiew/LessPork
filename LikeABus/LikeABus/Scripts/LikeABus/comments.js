@@ -8,3 +8,10 @@
     display.append(content);
 };
 
+function showComments(number,route,ups,downs,comments) {
+    var container = $("#comment-box");
+    var content = "<div>" +
+        "<p>" + number + "</p>"
+        + "<h4>" + route + "</h4>" +
+        "</div>";
+};

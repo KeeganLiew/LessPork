@@ -34,3 +34,7 @@ label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
   border:2px solid #4169e1;
   border-radius: 50%;
 }
+.logo {
+    max-height: 25px;
+    max-width: 25px;
+}
