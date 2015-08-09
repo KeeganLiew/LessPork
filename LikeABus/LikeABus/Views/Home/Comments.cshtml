@@ -24,19 +24,19 @@
         }
         document.getElementById('busID').innerHTML = "You caught the <i>" + sessionStorage.getItem('busID') + "</i> bus that went";
         if (sessionStorage.getItem('busID') == null) {
-            document.getElementById('busID').innerHTML = "You caught the <i>ghost bus</i> that went";
+            document.getElementById('busID').innerHTML = "You caught the <i>-ghost bus-</i> that went";
         }
         document.getElementById('route').innerHTML = "<i>from " + sessionStorage.getItem('route') + "</i>";
         if (sessionStorage.getItem('route') == null) {
-            document.getElementById('route').innerHTML = "<i>from HackFest to Teufort</i>";
+            document.getElementById('route').innerHTML = "<i>-from HackFest to Teufort-</i>";
         }
         document.getElementById('rating').innerHTML = "You rated it as a <i>" + sessionStorage.getItem('rating') + "</i> experience";
         if (sessionStorage.getItem('rating') == null) {
-            document.getElementById('rating').innerHTML = "You rated it as a <i>dank</i> experience.";
+            document.getElementById('rating').innerHTML = "You rated it as a <i>-unknown-</i> experience.";
         }
         document.getElementById('date').innerHTML = "Submitted at: <i>" + sessionStorage.getItem('date') + "</i>";
         if (sessionStorage.getItem('date') == null) {
-            document.getElementById('date').innerHTML = "Submitted at: <i>13:61:61 PM</i>";
+            document.getElementById('date').innerHTML = "Submitted at: <i>-13:61:61 PM-</i>";
         }
     </script>
 </div>

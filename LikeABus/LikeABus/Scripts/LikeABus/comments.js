@@ -35,7 +35,6 @@ function button(number, route) {
     //alert("persistedval: " + persistedval1 + " " + persistedval2);
     window.location = '/Home/FeedBack';
 }
-/*** you can fix later nary
 function showComments(number,route,ups,downs,comments) {
     var container = $("#comment-box");
 
@@ -68,4 +67,3 @@ function addComments(com) {
     $("#busInfo").append("<button> Back</button>" +
         "</div>");
 }
-***/

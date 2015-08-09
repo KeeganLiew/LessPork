@@ -19,8 +19,9 @@ function submitForm() {
     console.log("opened script file");
 }
 function myFunction() {
+
     //console.log("Hello myFunction()s");        
-    var submit = new person("","","","");
+    var submit = new person("", "", "", "");
     if (document.getElementById('up').checked) {
         submit.rating = "positive";
         //console.log("UP");
@@ -38,8 +39,10 @@ function myFunction() {
     sessionStorage.setItem("date", submit.time);
 
     window.location.replace = '/Home/Comments';
-    DataResults("aaa", "ddd", submit.rating, submit.comment, submit.time)
+    /** Causing azure deployment error, you can fix later zoe
 
+    DataResults("aaa", "ddd", submit.rating, submit.comment, submit.time)
+    **/
 }
 
 
