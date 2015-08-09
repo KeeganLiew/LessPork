@@ -22,7 +22,6 @@ namespace LikeABus.Controllers
 
         public ActionResult Comments()
         {
-            ViewBag.Message = "Your comment";
             return View();
         }
 

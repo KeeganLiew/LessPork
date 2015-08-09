@@ -1,38 +1,17 @@
 ﻿@{
     ViewBag.Title = "Comments";
 }
-<h2>@ViewBag.Title</h2>
-<h3>@ViewBag.Message</h3>
+
+
 <head>
-    <script src="../../Scripts/LikeABus/comments.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../../Scripts/LikeABus/comments.js">    
+    </script>
 </head>
 <body>
-  <div id="comment-box"></div>
-  <p id="comment">Testing</p>
-    <p id="busID"></p>
-    <p id="route"></p>
-    <p id="rating"></p>
-    <p id="date"></p>
-  <script>
-      document.getElementById('comment').innerHTML = "Your review was \"<i>" + sessionStorage.getItem('comment')+"\"</i>.";
-      if (sessionStorage.getItem('comment') == null) {
-          document.getElementById('comment').innerHTML = "Review: <i>-You haven't submitted a review-</i>";
-      }
-      document.getElementById('busID').innerHTML = "You caught the <i>" + sessionStorage.getItem('busID') + "</i> bus that went";
-      if (sessionStorage.getItem('busID') == null) {
-          document.getElementById('busID').innerHTML = "You caught the <i>ghost bus</i> that went";
-      }
-      document.getElementById('route').innerHTML = "<i>from " + sessionStorage.getItem('route') + "</i>";
-      if (sessionStorage.getItem('route') == null) {
-          document.getElementById('route').innerHTML = "<i>from HackFest to Teufort</i>";
-      }
-      document.getElementById('rating').innerHTML = "You rated it as a <i>" + sessionStorage.getItem('rating') + "</i> experience";
-      if (sessionStorage.getItem('rating') == null) {
-          document.getElementById('rating').innerHTML = "You rated it as a <i>dank</i> experience.";
-      }
-      document.getElementById('date').innerHTML = "Submitted at: <i>" + sessionStorage.getItem('date')+"</i>";
-      if (sessionStorage.getItem('date') == null) {
-          document.getElementById('date').innerHTML = "Submitted at: <i>13:61:61 PM</i>";
-      }
-  </script>
+
+<div id="comment-box" class="jumbotron">
+    <h2>@ViewBag.Title</h2>
+
+</div>
 </body>
