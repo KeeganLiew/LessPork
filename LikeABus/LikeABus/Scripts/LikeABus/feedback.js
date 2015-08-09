@@ -10,6 +10,10 @@ function person(rating, comment, latitude, longitude) {
     this.route = sessionStorage.getItem("route")
 }
 
+var str = document.getElementById("header2").innerHTML;
+str = str + "" + sessionStorage.getItem("busID") + " - " + sessionStorage.getItem("route");
+//debugger;
+document.getElementById("header2").innerHTML = str;
 
 function submitForm() {
     console.log("opened script file");
