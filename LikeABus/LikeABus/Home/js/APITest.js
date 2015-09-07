@@ -12,7 +12,7 @@ function showPosition(position) {
 	var x = document.getElementById("demo");
 	x.innerHTML = "You are currently at <i>Latitude of " + position.coords.latitude +
     " and <i>Longitude of " + position.coords.longitude + "<br>";
-	getNearestBusInformation(position.coords.latitude,position.coords.longitude,240);
+	getNearestBusInformation(position.coords.latitude,position.coords.longitude,340);
 }
 
 function compare(a, b) {
